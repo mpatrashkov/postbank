@@ -1,0 +1,7 @@
+{
+  "name": "postbank",
+  "displayName": "Postbank Health",
+  "expo": {
+    "sdkVersion": "33.0.0"
+  }
+}
