@@ -1,5 +1,6 @@
 package com.postbank;
 
+import com.reactnative.googlefit.GoogleFitPackage;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
@@ -34,7 +35,7 @@ public class MainApplication extends Application implements ReactApplication {
     }
 
     @Override
-    protected List<ReactPackage> getPackages() {
+    protected List<ReactPackage> getPackages(new GoogleFitPackage(BuildConfig.APPLICATION_ID)) {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new ModuleRegistryAdapter(mModuleRegistryProvider)
