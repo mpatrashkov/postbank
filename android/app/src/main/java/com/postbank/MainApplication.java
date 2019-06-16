@@ -4,6 +4,8 @@ import com.reactnative.googlefit.GoogleFitPackage;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import co.apptailor.googlesignin.RNGoogleSigninPackage;
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -18,6 +20,8 @@ import org.unimodules.core.interfaces.SingletonModule;
 import expo.modules.constants.ConstantsPackage;
 import expo.modules.permissions.PermissionsPackage;
 import expo.modules.filesystem.FileSystemPackage;
+
+import co.apptailor.googlesignin.RNGoogleSigninPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -38,8 +42,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-          new ModuleRegistryAdapter(mModuleRegistryProvider),
-          new GoogleFitPackage(BuildConfig.APPLICATION_ID)
+            new RNGoogleSigninPackage(),
+            new RNGestureHandlerPackage(),
+          new ModuleRegistryAdapter(mModuleRegistryProvider)
       );
     }
 
