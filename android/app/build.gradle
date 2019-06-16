@@ -78,7 +78,7 @@ project.ext.react = [
 
 apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
 apply from: "../../node_modules/react-native/react.gradle"
-
+apply plugin: 'com.android.application'
 /**
  * Set this to true to create two separate APKs instead of one:
  *   - An APK that only works on ARM devices
@@ -139,6 +139,8 @@ android {
 }
 
 dependencies {
+    compile 'com.google.android.gms:play-services-fitness:16.0.1'
+    compile 'com.google.android.gms:play-services-auth:16.0.1'
     compile project(':react-native-google-fit')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"

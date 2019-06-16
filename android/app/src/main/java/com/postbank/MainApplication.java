@@ -35,10 +35,11 @@ public class MainApplication extends Application implements ReactApplication {
     }
 
     @Override
-    protected List<ReactPackage> getPackages(new GoogleFitPackage(BuildConfig.APPLICATION_ID)) {
+    protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-          new ModuleRegistryAdapter(mModuleRegistryProvider)
+          new ModuleRegistryAdapter(mModuleRegistryProvider),
+          new GoogleFitPackage(BuildConfig.APPLICATION_ID)
       );
     }
 
