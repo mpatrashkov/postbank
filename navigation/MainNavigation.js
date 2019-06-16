@@ -6,6 +6,8 @@ import RewardsScreen from "../screens/RewardsScreen";
 import TabBarIcon from "../components/TabBarIcon";
 import NavigationTitle from '../components/NavigationTitle';
 import Colors from '../Colors';
+import { View } from "react-native";
+import SignInScreen from '../screens/SignInScreen';
 
 const HomeStack = createStackNavigator({
     Home: HomeScreen
@@ -45,12 +47,15 @@ const LeaderboardsTopNavigation = createMaterialTopTabNavigator({
     tabBarOptions: {
         labelStyle: {
             color: "#000"
+        },
+        indicatorStyle: {
+            backgroundColor: Colors.secondary
         }
     }
 });
 
 LeaderboardsTopNavigation.navigationOptions = {
-    headerTitle: <NavigationTitle text="Leaderboards" />
+    title: "Leaderboards"
 }
 
 const LeaderboardsStack = createStackNavigator({
@@ -66,8 +71,7 @@ const LeaderboardsStack = createStackNavigator({
     }
 });
 LeaderboardsStack.navigationOptions = {
-    tabBarLabel: "Leaderboards",
-    headerTitle: <NavigationTitle text="Leaderboards"/>
+    tabBarLabel: "Leaderboards"
 }
 
 const RewardsStack = createStackNavigator({
@@ -82,8 +86,17 @@ RewardsStack.navigationOptions = {
     tabBarLabel: "Rewards"
 }
 
-export default createBottomTabNavigator({
-    HomeStack,
+const BottomNavigation = createBottomTabNavigator({
     LeaderboardsStack,
+    HomeStack,
     RewardsStack
 });
+
+BottomNavigation.navigationOptions = {
+    header: null
+}
+
+export default createStackNavigator({
+    Signin: SignInScreen,
+    Main: BottomNavigation
+})

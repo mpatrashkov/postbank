@@ -4,7 +4,7 @@ import FullHeightView from '../components/FullHeightView';
 
 class RewardsScreen extends Component {
     static navigationOptions = {
-        header: null
+        title: "Rewards"
     }
 
     render() {

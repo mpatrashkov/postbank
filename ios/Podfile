@@ -31,6 +31,8 @@ target 'postbank' do
 
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
+  pod 'RNGoogleSignin', :path => '../node_modules/react-native-google-signin'
+
   target 'postbankTests' do
     inherit! :search_paths
   end

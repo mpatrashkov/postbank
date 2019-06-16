@@ -1,0 +1,40 @@
+{
+    "project_info": {
+      "project_number": "977535412978",
+      "firebase_url": "https://upbeat-aspect-243905.firebaseio.com/",
+      "project_id": "upbeat-aspect-243905",
+      "storage_bucket": "upbeat-aspect-243905.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:977535412978:android:3b9b90e40c46c856",
+          "android_client_info": {
+            "package_name": "com.postbank"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "977535412978-h30e7mk224c4vi5t46afqa0lcl88sa4e.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyBrjbz66FR2cOlpJQkLFK9Y9jZOGFZtZe4"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": [
+              {
+                "client_id": "977535412978-h30e7mk224c4vi5t46afqa0lcl88sa4e.apps.googleusercontent.com",
+                "client_type": 3
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }

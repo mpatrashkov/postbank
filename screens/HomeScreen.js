@@ -7,7 +7,7 @@ import LevelInfo from '../components/LevelInfo';
 
 class HomeScreen extends Component {
     static navigationOptions = {
-        headerTitle: <NavigationTitle text="Home"/>
+        title: "Home"
     }
 
     render() {
